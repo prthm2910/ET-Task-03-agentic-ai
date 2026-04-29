@@ -12,6 +12,7 @@ dependencies = [
     "streamlit",
     "langchain",
     "langgraph",
+    "langgraph-checkpoint-postgres",
     "langchain-openai",
     "langchain-google-genai",
     "psycopg",
