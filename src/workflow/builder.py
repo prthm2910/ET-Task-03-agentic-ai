@@ -18,7 +18,7 @@ def build_chatbot_graph():
         pool,
         index={
             "embed": get_embeddings_provider(),
-            "dims": int(settings.embedding_dimensions),
+            "dims": settings.embedding_dimensions,
             "fields": ["fact"]
         }
     )
