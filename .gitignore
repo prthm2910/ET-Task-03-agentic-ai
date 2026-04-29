@@ -25,3 +25,8 @@ cache/
 .DS_Store
 .vscode/
 .idea/
+
+#Miscellaneous
+.planning/
+.code-review-graph/
+*.egg-info/

@@ -1,6 +1,8 @@
 streamlit
 langchain
-langchain-nvidia-ai-endpoints
+langchain-openai
 langgraph
+langgraph-checkpoint-postgres
+psycopg[binary]
 python-dotenv
 pytest
