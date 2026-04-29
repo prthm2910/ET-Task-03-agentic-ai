@@ -2,8 +2,10 @@ import pytest
 
 from langchain_core.messages import HumanMessage, AIMessage
 
-from src.graph import chatbot_graph
-from src.graph import call_model
+from src.workflow.builder import build_chatbot_graph
+from src.workflow.nodes import call_chatbot as call_model
+
+chatbot_graph = build_chatbot_graph()
 
 def test_graph_initial_state():
     """Verify that a new thread starts with an empty message list."""
