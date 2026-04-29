@@ -1,1 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Streamlit
+.streamlit/secrets.toml
+
+# LangChain / LangGraph
+.langgraph/
+cache/
+
+# Environment / Secrets
+.env
+.env.local
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+#Miscellaneous
 .planning/
+.code-review-graph/
+*.egg-info/
