@@ -7,17 +7,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Ensure the project root is in the python path
-# We look for the directory containing 'src'
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# project_root = current_dir
-# while project_root != os.path.dirname(project_root): # stop at root
-#     if os.path.exists(os.path.join(project_root, "src")):
-#         break
-#     project_root = os.path.dirname(project_root)
 
-# if project_root not in sys.path:
-#     sys.path.insert(0, project_root)
 
 import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
