@@ -23,8 +23,8 @@ def delete_thread_data(user_id: str, thread_id: str, store):
     """Purges thread metadata and history using the provided store and direct SQL."""
     store.delete((user_id, "threads"), thread_id)
     with DB_POOL.connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute("DELETE FROM checkpoints WHERE thread_id = %s", (thread_id,))
-            cur.execute("DELETE FROM checkpoint_blobs WHERE thread_id = %s", (thread_id,))
-            cur.execute("DELETE FROM checkpoint_writes WHERE thread_id = %s", (thread_id,))
-            conn.commit()
+        with conn.transaction():
+            with conn.cursor() as cur:
+                cur.execute("DELETE FROM checkpoints WHERE thread_id = %s", (thread_id,))
+                cur.execute("DELETE FROM checkpoint_blobs WHERE thread_id = %s", (thread_id,))
+                cur.execute("DELETE FROM checkpoint_writes WHERE thread_id = %s", (thread_id,))
